@@ -46,18 +46,65 @@ import random
 #     print(price)
 
 #2
+#
+# a=random.randint(1,101)
+# i=0
+# while True:
+#     i += 1
+#     print(i, "회 시도")
+#     b = int(input("숫자를 입력하세요:"))
+#     if a>b:
+#         print("업")
+#     elif a<b:
+#         print("다운")
+#     else:
+#         print("정답")
+#         break
 
-a=random.randint(1,101)
-i=0
-while True:
-    i += 1
-    print(i, "회 시도")
-    b = int(input("숫자를 입력하세요:"))
-    if a>b:
-        print("업")
-    elif a<b:
-        print("다운")
-    else:
-        print("정답")
-        break
+#
+# # 비밀번호 문제
+# def pw(x):
+#     len_pw=len(x)
+#     return len_pw
+#
+# pwrd=input("비밀번호를 입력하세요:")
+#
+# if pw(pwrd)>=9:
+#     print("good")
+# elif pw(pwrd)<5:
+#     print("bad")
+# else:
+#     print("normal")
+
+
+#할인 제도
+
+#계약금액(contractPrice), 사용 개월 수(period), 카드 코드(cardCode)
+
+contractPrice=int(input("계약 금액을 입력하세요:"))
+period=int(input("사용 개월 수:"))
+cardCode=int(input("카드 코드:"))
+
+period_dis=1
+cardCode_dis=1
+if period>12:
+    period_dis=0.2
+elif period<6:
+    period_dis=0
+else:
+    period_dis=0.1
+
+if cardCode==11:
+    cardCode_dis=0.05
+elif cardCode==12:
+    cardCode_dis=0.08
+elif cardCode==13:
+    cardCode_dis=0.12
+
+price=contractPrice-(contractPrice*period_dis)-(contractPrice*cardCode_dis)
+
+print(price)
+
+
+
 
