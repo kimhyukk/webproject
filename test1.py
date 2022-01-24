@@ -33,4 +33,14 @@ elif a==3:
 
 #1.
 
-a=int(input("티셔츠의 개수를 입력해주세요:"))
+num_Tshirt=int(input("티셔츠의 개수를 입력해주세요:"))
+num_sweater=int(input("스웨터의 개수를 입력해주세요:"))
+
+price=num_sweater*10000+num_sweater+30000
+
+if price >100000:
+    price=price*0.85
+else:
+    price=price*0.95
+
+print(price)
